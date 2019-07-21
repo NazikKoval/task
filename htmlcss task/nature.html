@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300&display=swap" rel="stylesheet"> </head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<body>
+    <header>
+        <div class="left"><img src="images/webdesign_0000s_0003s_0000s_0002_logo.png" alt=""></div>
+        <div class="center">
+            <nav>
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="right">
+            <form>
+                <input type="search" placeholder="Пошук" class="inp"> </form> <img src="images/webdesign_0000s_0003s_0000s_0000s_0000_.png" alt="" class="rImg"> <img src="images/%D0%91%D0%B5%D0%B7%20%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8-7.png" alt="" class="rImg2"></div>
+    </header>
+    <div class="main">
+        <div class="container">
+            <p class="text">Web Design</p>
+            <p class="text2">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum , ut fermentum massa justo sit amet erat a ante venenatis dapibus posuere velit</p>
+            <button class="button">REALLY?</button> <img src="images/sd.png" alt="" class="arrow"> </div><img src="images/webdesign_0000s_0003s_0003s_0000_Layer%206.jpg" alt="" class="imgZast"> </div>
+    <div class="box">
+        <div> <img src="images/webdesign_0000s_0001s_0000s_0001_Layer-11.png" alt="" class="imgBox">
+            <p>AMET CONDIMENTUM
+                <br><span>Dolor</span></p>
+        </div>
+        <div> <img src="images/webdesign_0000s_0001s_0001s_0001_Layer-8.png" alt="" class="imgBox">
+            <p>LOREM CURSUS
+                <br><span>Ligula</span></p>
+        </div>
+        <div> <img src="images/webdesign_0000s_0001s_0003s_0001_Layer-9.png" alt="" class="imgBox">
+            <p>CONDIMENTUM ULTRICIES
+                <br><span>Consectetur</span></p>
+        </div>
+        <div> <img src="images/webdesign_0000s_0001s_0002s_0001_Layer-10.png" alt="" class="imgBox">
+            <p>RIDICULOS ORNARE
+                <br><span>Ullamcorper</span></p>
+        </div>
+    </div>
+    <div class="links">
+        <div class="row">
+            <div class="column col1">
+                <h2>FOLLOW US</h2>
+                <ul style="list-style-type:none;">
+                    <li>Twittwer</li>
+                    <li>Facebook</li>
+                    <li>Linkedin</li>
+                    <li>Pinterest</li>
+                    <li>YouTube</li>
+                </ul>
+            </div>
+            <div class="column col3">
+                <h2>GET TO KNOW US</h2>
+                <ul style="list-style-type:none;">
+                    <li>About</li>
+                    <li>Policies</li>
+                    <li>Careers</li>
+                    <li>Press</li>
+                    <li>Developers</li>
+                </ul>
+            </div>
+            <div class="column">
+                <h2>LOCATIONS</h2>
+                <ul style="list-style-type:none;">
+                    <li>Detroit</li>
+                    <li>London</li>
+                    <li>Florida</li>
+                    <li>Las Vegas</li>
+                    <li>California</li>
+                </ul>
+            </div>
+            <div class="column col4">
+                <h2>OUR MISSION</h2>
+                <ul style="list-style-type:none;">
+                    <li>Fusce dapibus, tellus ac cursus commodo, tortor mauris </li>
+                    <li>condimentum nibh, ut fermentum massa justo sit amet</li>
+                    <li>risus. Integer posuere erat a ante venenatis dapibus </li>
+                    <li>posuere velit aliquet. Praesent commodo cursus magna, </li>
+                    <li>vel scelerisque nisl consectetur et. Sed posuere consectetur</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer"> <span class="fot">COPYRIGHT</span> </div>
+    <div class="popup">
+        <div class="inPopup">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio eius veritatis nemo itaque dolorum molestiae temporibus et dolor recusandae adipisci. Nostrum est veniam minima eveniet mollitia odit tempora voluptatibus! Quisquam.</p>
+            <button class="button button3">CLOSE</button>
+        </div>
+    </div>
+</body>
+<script>
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 1) {
+            $('header').addClass("glide");
+            $('.rImg').addClass("glide");
+            $('input').addClass("glide");
+        }
+        else {
+            $('header').removeClass("glide");
+            $('.rImg').removeClass("glide");
+            $('input').removeClass("glide");
+        }
+    });
+    $(".rImg").click(function () {
+        $(".inp").toggle("fast", function () {});
+    });
+    $(".imgBox").click(function () {
+        $(".popup").fadeIn("fast");
+    });
+    $(".button3").click(function () {
+        $(".popup").fadeOut("fast");
+    });
+</script>
+
+</html>

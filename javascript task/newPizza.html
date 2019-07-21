@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body> </body>
+<script>
+    var pizzas = {
+        cap: {
+            dough: 1,
+            tomato_sauce: 1,
+            onion: 2,
+            sausage: 2,
+            mashroom: 3,
+            cheese: 1,
+        },
+        onions: {
+            dough: 1,
+            tomato_sauce: 1,
+            onion: 2,
+            meat: 1,
+            cheese: 1,
+        },
+        king_one: {
+            dough: 1,
+            tomato_sauce: 1,
+            onion: 2,
+            mayo: 1,
+            mashroom: 3,
+            tomato: 2,
+            cheese: 3,
+            dill: 2,
+            parsley: 2
+        },
+        gavay: {
+            dough: 1,
+            tomato_sauce: 1,
+            onion: 2,
+            ananas: 1,
+            cheese: 2,
+        },
+        tonno: {
+            dough: 1,
+            tomato_sauce: 1,
+            tuna: 2,
+            kappers: 1,
+            cheese: 1,
+        },
+        vegeterian: {
+            dough: 1,
+            tomato_sauce: 1,
+            tomato: 2,
+            kappers: 1,
+            cucumber: 2,
+            onion: 2,
+            cheese: 1,
+
+        }
+    };
+
+    function getPizzaInfo(lastPizzas) {
+        var pizOrder = [pizzas.cap, pizzas.vegeterian, pizzas.tonno, pizzas.onions, pizzas.gavay, pizzas.king_one];
+        var allPizzas = [];
+        var ingridients = [];
+
+        function compareOrders(num1, num2) {
+            return num2.orders - num1.orders;
+        };
+        for (var key in pizzas) {
+            for (var prop in lastPizzas) {
+                var res = lastPizzas.filter(item => item == lastPizzas[prop]).length;
+
+                if (lastPizzas[prop] == key) {
+                    pizzas[key].orders = res;
+                    pizzas[key].name = key;
+                };
+            };
+            pizOrder.sort(compareOrders);
+        };
+        for (var key in pizOrder) {
+            if (key < 5) {
+                allPizzas.push(pizOrder[key].name);
+            }
+        };
+        console.log('Popular:');
+        console.log(allPizzas);
+        console.log('Ingridients:');
+
+        var obj = {}
+        var End = 0;
+        var End2 = 0;
+        var End3 = 0;
+        var End4 = 0;
+        var End5 = 0;
+        var End6 = 0;
+        var End7 = 0;
+        var End8 = 0;
+        var End9 = 0;
+        var End10 = 0;
+        var End11 = 0;
+        var End12 = 0;
+        var End13 = 0;
+        var End14 = 0;
+        for (var key in pizzas) {
+            var cheese = pizzas[key].orders * pizzas[key].cheese;
+            var End = cheese += End;
+            if (pizzas[key].onion) {
+                var onionn = pizzas[key].orders * pizzas[key].onion;
+                var End2 = onionn += End2;
+            }
+            if (pizzas[key].dough) {
+                var dough = pizzas[key].orders * pizzas[key].dough;
+                var End3 = dough += End3;
+            }
+            if (pizzas[key].sausage) {
+                var sausage = pizzas[key].orders * pizzas[key].sausage;
+                var End4 = sausage += End4;
+            }
+            if (pizzas[key].mashroom) {
+                var mashroom = pizzas[key].orders * pizzas[key].mashroom;
+                var End5 = mashroom += End5;
+            }
+            if (pizzas[key].tomato_sauce) {
+                var tomato_sauce = pizzas[key].orders * pizzas[key].tomato_sauce;
+                var End6 = tomato_sauce += End6;
+            }
+            if (pizzas[key].meat) {
+                var meat = pizzas[key].orders * pizzas[key].meat;
+                var End7 = meat += End7;
+            }
+            if (pizzas[key].mayo) {
+                var mayo = pizzas[key].orders * pizzas[key].mayo;
+                var End8 = mayo += End8;
+            }
+            if (pizzas[key].tomato) {
+                var tomato = pizzas[key].orders * pizzas[key].tomato;
+                var End9 = tomato += End9;
+            }
+            if (pizzas[key].dill) {
+                var dill = pizzas[key].orders * pizzas[key].dill;
+                var End10 = dill += End10;
+            }
+            if (pizzas[key].parsley) {
+                var parsley = pizzas[key].orders * pizzas[key].parsley;
+                var End11 = parsley += End11;
+            }
+            if (pizzas[key].ananas) {
+                var ananas = pizzas[key].orders * pizzas[key].ananas;
+                var End12 = ananas += End12;
+            }
+            if (pizzas[key].kappers) {
+                var kappers = pizzas[key].orders * pizzas[key].kappers;
+                var End13 = kappers += End13;
+            }
+            if (pizzas[key].cucumber) {
+                var cucumber = pizzas[key].orders * pizzas[key].cucumber;
+                var End14 = cucumber += End14;
+            }
+        }
+        obj.cheese = End
+        obj.onion = End2
+        obj.dough = End3
+        obj.sausage = End4
+        obj.mashroom = End5
+        obj.tomato_sauce = End6
+        obj.meat = End7
+        obj.mayo = End8
+        obj.tomato = End9
+        obj.dill = End10
+        obj.parsley = End11
+        obj.ananas = End12
+        obj.kappers = End13
+        obj.cucumber = End13
+        keysSorted = Object.keys(obj).sort(function(a, b) {
+            return obj[b] - obj[a]
+        })
+        console.log(keysSorted);
+    };
+    getPizzaInfo(['cap', 'cap', 'onions', 'gavay', 'cap', 'tonno', 'vegeterian', 'king_one']);
+</script>
+
+</html>
